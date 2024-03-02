@@ -31,8 +31,11 @@ export class Preloader extends Scene
     {
         //  Load the assets for the game - Replace with your own assets
         this.load.setPath('assets');
+        this.load.spritesheet('knight','sprites/knight/Idle-Sheet.png', {frameWidth:32,frameHeight:16})
+        this.load.image('tileset', 'tilemaps/tiles.png');
 
         this.load.image('logo', 'logo.png');
+        this.load.tilemapTiledJSON('tilemap', 'tilemaps/tilemap.json')
     }
 
     create ()
